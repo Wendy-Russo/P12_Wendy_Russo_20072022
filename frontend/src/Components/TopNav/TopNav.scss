@@ -1,0 +1,64 @@
+nav{
+
+    background-color: black;
+    font-size: 24px;
+    a{
+      text-decoration: none;
+      color: white;
+    }
+  }
+  
+  .topBar{
+  
+    width: 100vw;
+    height: 9vh;
+  
+    display: flex;
+    flex-direction: column;
+  
+    position: fixed;
+    z-index: 2;
+  
+    ul{
+  
+      color: white;
+      display: flex;
+      list-style: none;
+      justify-content: space-between;
+      align-items: center;
+  
+      margin: auto 0;
+      padding: 0 8rem 0 2rem;
+    }
+  
+    .li-logo{
+  
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      color: #E60000 ;
+  
+    }
+  
+    .img-logo{
+  
+      height: 57px;
+  
+      margin: 0 1rem 0 0 ;
+    }
+  }
+
+  option{
+    background-color: black;
+    color: white;
+    padding: 0;
+    margin: 0;
+  }
+
+  select{
+    background-color: black;
+    font-size: 24px;
+    color: white;
+    font-family: system-ui, Roboto;
+    border: 0;
+  }

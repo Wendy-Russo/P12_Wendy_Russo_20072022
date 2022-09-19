@@ -1,0 +1,60 @@
+/*--TEXT--*/
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.text-center{
+    text-anchor: middle;
+    text-align: center;
+}
+
+.fs-10{
+    font-size: 10px;
+}
+
+.fs-12{
+    font-size: 12px;
+}
+
+.fs-14{
+    font-size: 14px;
+}
+
+.fs-15{
+    font-size: 15px;
+}
+
+.fs-26{
+    font-size: 26px;
+}
+
+.fw-700{
+    font-weight: 700;
+}
+
+/*-- --*/
+.fill-white{
+    fill: white;
+}
+
+.fill-red{
+    fill: red;
+}
+
+.dashed{
+    stroke-dasharray: 3 2;
+}
+
+.stroke-round{
+    stroke-linecap : round;
+}
+
+.stroke-butt{
+    stroke-linecap : butt;
+}
+
+.chart{
+    border-radius: 5px;
+}

@@ -1,0 +1,56 @@
+
+.card{
+
+  width: 175px;
+  height: 60px;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: flex-start;
+
+  text-align: start;
+}
+.iconContainer{
+
+  height: 60px;
+  width: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+
+  margin: 0 24px 0 0;
+    &.red{
+      background-color: rgba(red,0.0661);
+    }
+    &.blue{
+      background-color: #4AB8FF1A;
+    }
+    &.orange{
+      background-color: rgba(#F9CE23,0.1017);
+    }
+    &.pink{
+      background-color: #FD51811A;
+    }
+}
+
+.quantity{
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+
+  margin: 0;
+}
+
+.nutrient{
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  color: rgba(black,0.5);
+
+  margin: 0;
+}

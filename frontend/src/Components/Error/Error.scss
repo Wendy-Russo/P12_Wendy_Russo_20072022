@@ -1,0 +1,60 @@
+
+.error-greetings{
+    height: 20vh;
+    width: 95%;
+
+    margin: 3rem 0rem;
+}
+
+.error-overlay{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 6;
+    color: red;
+    
+}
+.error-bg{
+
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+
+}
+.error-card{
+    width: 66%;
+    height: 20%;
+}
+.error-barchart-container{
+    height: 20vh;
+    width: 100%;
+    margin: 0 0 3rem 0;
+}
+
+.bg{
+    background-color: hsl(0, 0, 90);
+    border-radius: 5px;
+}
+
+.error-cards-section{
+    margin: 0rem 0;
+}
+.square{
+    width: 19vw;
+    height: 19vw;
+}
+.z-4{
+    z-index: 4;
+}

@@ -1,0 +1,67 @@
+nav{
+
+    background-color: black;
+    font-size: 24px;
+    a{
+      text-decoration: none;
+      color: white;
+    }
+  }
+  
+  .sideBar{
+  
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  
+    height: 100vh;
+    width: 8.125vw;
+  
+    ul{
+  
+      position: fixed;
+      bottom: 0rem;
+  
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      color: white;
+      list-style: none;
+  
+      margin: 0;
+      padding: 0;
+  
+    }
+  
+    .nav-icon{
+  
+      height: 64px;
+      width: 64px;
+  
+      display: flex;
+      justify-content: center;
+      background-color: white ;
+      border-radius: 6px;
+  
+      margin: 0.6rem 0;
+      padding: 0;
+      img{
+        margin: auto;
+        height: 32px;
+        width: 32px;
+      }
+    }
+  
+    .nav-copyright{
+  
+      font-size: 12px;
+      writing-mode:vertical-lr;
+      transform: rotateZ(180deg);
+  
+      margin: 12vh 0 6vh 0;
+  
+    }
+  }
