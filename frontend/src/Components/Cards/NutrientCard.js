@@ -59,7 +59,7 @@ function NutrientCard(props) {
     }
   
     return(
-
+      
       <div className='card'>
         <div className={"iconContainer " + color}>
           <img className='nutrientIcon' src={iconToUse}/>

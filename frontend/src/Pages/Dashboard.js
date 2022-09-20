@@ -17,14 +17,14 @@ import Error from "../Components/Error/Error.js";
 import './Dashboard.scss'
 
 let isError = false;
-
+const ALL_IDS = [12,18]
 
 
 const Dashboard = () => {
 
     const [userData, setUserData] = useState()
     const [firstNames, setFirstNames] = useState()
-    //array ids
+    
     const [userScore, setUserScore] = useState() 
     const [keyData, setKeydata] = useState()
     const [sessions, setSessions] = useState()
@@ -47,21 +47,27 @@ const Dashboard = () => {
         .catch((error)=>{
             console.log(error)
         });  
-        let x;
-        [18,12].forEach((ids,idx) => {
+        let tempFirstNames;
+        ALL_IDS.forEach((ids) => {
             getAllData(ids)
             .then((values)=>{
-                x.push(values[0].data.userInfos.firstName)
+                if(tempFirstNames !== undefined){
+                    tempFirstNames = [tempFirstNames,[ids ,values[0].data.userInfos.firstName]]
+                }
+                else{
+                    tempFirstNames = [ids ,values[0].data.userInfos.firstName]
+                }
+                setFirstNames(tempFirstNames)
+
             })
             .catch((error)=>{
                 console.log(error)
             }); 
         })
-        setFirstNames(x)
             
     },[id])
 
-    console.log(firstNames)
+    //console.log(firstNames)
 
     if(userData !== undefined && keyData !== undefined && userScore !== undefined && sessions !== undefined && activity !== undefined && performance !== undefined){
         isError = false;
@@ -76,7 +82,7 @@ const Dashboard = () => {
 
             
             <header>
-                <TopNav ids={0}/>
+                <TopNav names={firstNames} ids={ALL_IDS}/>
                 <SideNav/>
             </header>
             

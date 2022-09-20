@@ -67,13 +67,13 @@ function PieChartScore(props) {
         .selectAll("text")
         .data([ "" , "" ])
         .join("text")
-        .attr("class","description-text center")
+        .attr("class","description-text text-center")
         .attr("dy",(elem,id) => (id+1) *20 )
-        .text((elem,id) =>  id ? "de votre" : "objectif")
+        .text((elem,id) =>  id ? "objectif" : "de votre")
 
       DESCRIPTION
         .append("text")
-        .attr("class","description-percentage center fw-700 fs-26")
+        .attr("class","description-percentage text-center fw-700 fs-26")
         .attr("fill", "#282D30")
         .text(SCORE * 100 + "%")
 

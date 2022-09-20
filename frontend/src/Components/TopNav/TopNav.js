@@ -10,54 +10,64 @@ import './TopNav.scss'
 function aa(e){
   window.location = e.target.value
 }
-function TopNav() {
+function TopNav(props) {
   
+  const FIRST_NAMES = props.names;
+  
+  if(FIRST_NAMES !== undefined){
 
-  return(
-    <>
-      <nav className="topBar">
-        
-        <ul>
-          <li>
-            <Link to="/" className='li-logo'>
-              <img  src={Logo} className="img-logo" />
-              SportSee
-            </Link>
-          </li>
+    console.log(FIRST_NAMES)
 
-          <li>
-            <Link to="/">
-              Accueil
-            </Link>
-          </li>
+    const OPTIONS = FIRST_NAMES.flatMap((elem) =>  <option value={elem[0]}> {elem[1]} </option>);
 
-          <li>
-            
-            <select id='userSelect' className='userSelect' onChange={aa}>
-              <option value="">
-                Profil
-              </option>
-              <option value="/users/12" >
-                12
-              </option>
-              <option value="/users/18">
-                18
-              </option>
-            </select>
-          </li>
+    console.log((OPTIONS))
 
-          <li>
-              Réglage
-          </li>
+    return(
+      <>
+        <nav className="topBar">
+          
+          <ul>
+            <li>
+              <Link to="/" className='li-logo'>
+                <img  src={Logo} className="img-logo" />
+                SportSee
+              </Link>
+            </li>
+  
+            <li>
+              <Link to="/">
+                Accueil
+              </Link>
+            </li>
+  
+            <li>
+              
+              <select id='userSelect' className='userSelect' onChange={aa}>
+                <option value="">
+                  Profil
+                </option>
+                {OPTIONS}
+              </select>
+            </li>
+  
+            <li>
+                Réglage
+            </li>
+  
+            <li>
+                Communauté
+            </li>
+  
+          </ul>
+        </nav>
+      </>
+    )
+  }
 
-          <li>
-              Communauté
-          </li>
+  //const OPTIONS = FIRST_NAMES.map((name) => name.id + name.name)
 
-        </ul>
-      </nav>
-    </>
-  )
+  //console.log(OPTIONS)
+  
 }
 
 export default TopNav
