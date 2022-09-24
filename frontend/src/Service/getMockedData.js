@@ -13,7 +13,6 @@ import { USER_ACTIVITY, USER_AVERAGE_SESSIONS, USER_MAIN_DATA, USER_PERFORMANCE 
 export const getUserMainDataMocked= async (id) =>{
     try {
         const response = USER_MAIN_DATA.find((elt)=> elt.id == id)
-        console.log("getmocked", response)
         return {data : response}
 
 
@@ -26,9 +25,9 @@ export const getUserActivityMocked = async(id)=>{
 
 
     try {
-         const response = USER_ACTIVITY.find((elt)=> elt.userId == id)
+        const response = USER_ACTIVITY.find((elt)=> elt.userId == id)
         return {data : response}
-        
+
     } catch (error) {
         console.log("error " + error)
     }
@@ -39,7 +38,7 @@ export const getUserAverageSessionsMocked = async(id)=>{
     try {
         const response = USER_AVERAGE_SESSIONS.find((elt)=> elt.userId == id)
         return {data : response}
-        
+
     } catch (error) {
         console.log("error " + error)
     }
@@ -50,7 +49,7 @@ export const getUserPerformanceMocked= async(id)=>{
     try {
         const response = USER_PERFORMANCE.find((elt)=> elt.userId == id)
         return {data : response}
-        
+
     } catch (error) {
         console.log("error " + error)
     }

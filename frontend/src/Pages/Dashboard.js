@@ -21,22 +21,22 @@ const ALL_IDS = [12,18]
 
 /**
  * Uses multiple components to create a dashboard page (see maquette)
- * @returns {object} returns the created JSX object 
+ * @returns {object} returns the created JSX object
  */
 const Dashboard = () => {
 
     const [userData, setUserData] = useState()
     const [firstNames, setFirstNames] = useState()
-    
-    const [userScore, setUserScore] = useState() 
+
+    const [userScore, setUserScore] = useState()
     const [keyData, setKeydata] = useState()
     const [sessions, setSessions] = useState()
     const [activity, setActivity] = useState()
     const [performance, setPerformance] = useState()
     const { id } = useParams()
-   
-    
-   
+
+
+
     useEffect(()=>{
         getAllData(id)
         .then((values)=>{
@@ -49,8 +49,8 @@ const Dashboard = () => {
         })
         .catch((error)=>{
             console.log(error)
-        });  
-        let tempFirstNames = [];
+        });
+        let tempFirstNames;
         ALL_IDS.forEach((ids) => {
             getAllData(ids)
             .then((values)=>{
@@ -65,9 +65,9 @@ const Dashboard = () => {
             })
             .catch((error)=>{
                 console.log(error)
-            }); 
+            });
         })
-            
+
     },[id])
 
     //console.log(firstNames)
@@ -83,14 +83,14 @@ const Dashboard = () => {
 
     return  <>
 
-            
+
             <header>
                 <TopNav names={firstNames} ids={ALL_IDS}/>
                 <SideNav/>
             </header>
-            
+
             <main>
-                
+
                 {isError &&<Error />}
 
                 <Greetings firstName={userData || ""}/>
@@ -106,7 +106,7 @@ const Dashboard = () => {
                     <NutrientCard nutrient={"glucides"} quantity={keyData} />
                     <NutrientCard nutrient={"lipides"} quantity={keyData} />
                 </section>
-                
+
             </main>
         </>
 }
