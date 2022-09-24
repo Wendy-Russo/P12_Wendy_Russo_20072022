@@ -8,9 +8,10 @@ import { PropTypes } from "prop-types";
  * @returns {object} returns the created JSX object 
  */
 function Greetings(props) {
-  let firstName = props.firstName;
+  
+  const firstName = props.firstName;
 
-  if(firstName !== -1){
+  if(firstName){
 
     return(
       <>

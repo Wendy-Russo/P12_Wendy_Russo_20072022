@@ -26,6 +26,10 @@ function RegularHexagon(reScale,radius) {
   L${Math.sin(POLY_ANGLE*9) * SIZE},${Math.cos(POLY_ANGLE*9) * SIZE}
   Z`
 }
+RegularHexagon.propTypes = {
+  radius: PropTypes.number,
+  reScale: PropTypes.number
+}
 
 /**
  * Creates a radial (spider) chart for 6 types of performance , with a legend and no tooltip (see maquette)
@@ -110,11 +114,6 @@ function RadialChart(props) {
       </div>
     </>
   )
-}
-
-RegularHexagon.propTypes = {
-  radius: PropTypes.number,
-  reScale: PropTypes.number
 }
 RadialChart.propTypes = {
   perf: PropTypes.array

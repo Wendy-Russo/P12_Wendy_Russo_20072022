@@ -14,7 +14,6 @@ const DAYS = [ "L" , "M" , "M" , "J" , "V" , "S" , "D" ]
  * @param {object} props - "props.average" must contain a "sessions" array proprety containing a "sessionLength" sub proprety
  * @returns {object} returns the created JSX object 
  */
-
 function LineChart(props) {
 
   const AVERAGE = props.average;
@@ -133,7 +132,6 @@ function LineChart(props) {
     </>
   )  
 }
-
 LineChart.propTypes = {
   average: PropTypes.array
 }

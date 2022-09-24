@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import './Error.scss'
 
+/**
+ * creates a simple error page with UI elements outlined
+ * @returns {JSX} returns the created error page
+ */
 const Error = () => {
 
     return(

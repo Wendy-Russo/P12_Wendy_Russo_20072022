@@ -17,7 +17,7 @@ function PieChartScore(props) {
 
   const SCORE = props.score;
 
-  if(SCORE){
+  if(!document.querySelector("#pie-svg") && SCORE){
 
     const ANGLE_PI = SCORE * Math.PI * 2;
     const ANGLE_DEG = SCORE * 360;

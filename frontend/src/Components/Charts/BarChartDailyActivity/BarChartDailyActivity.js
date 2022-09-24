@@ -4,21 +4,22 @@ import { PropTypes } from "prop-types";
 import { makeArray } from '../../../Utils/makeArray';
 
 
+
+const MAX_BAR_HEIGHT = 150;
+const WIDTH = 750;
+const HEIGHT = 250;
+const MARGIN_Y = 30;
+const KG_CAl_SPACING = 10;
+const GRAPH_WITH = 700;
+const BAR_WIDTH = 7;
+
 /**
  * Creates a barChart for daily weight and burned calories, with tooltip and legend (see maquette)
  * @param {object} props - must contain a "sessions" array proprety containing "calories" and "kilogram" sub propreties
  * @returns {object} returns the created JSX object 
  */
-
- const MAX_BAR_HEIGHT = 150;
- const WIDTH = 750;
- const HEIGHT = 250;
- const MARGIN_Y = 30;
- const KG_CAl_SPACING = 10;
- const GRAPH_WITH = 700;
- const BAR_WIDTH = 7;
-
 function BarChartDailyActivity(props) {
+  
   const SESSIONS = props.sessions;
 
   if(!document.querySelector(".barChart-svg") && (SESSIONS)){

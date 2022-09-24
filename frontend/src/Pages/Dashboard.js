@@ -19,7 +19,10 @@ import './Dashboard.scss'
 let isError = false;
 const ALL_IDS = [12,18]
 
-
+/**
+ * Uses multiple components to create a dashboard page (see maquette)
+ * @returns {object} returns the created JSX object 
+ */
 const Dashboard = () => {
 
     const [userData, setUserData] = useState()
@@ -47,7 +50,7 @@ const Dashboard = () => {
         .catch((error)=>{
             console.log(error)
         });  
-        let tempFirstNames;
+        let tempFirstNames = [];
         ALL_IDS.forEach((ids) => {
             getAllData(ids)
             .then((values)=>{
