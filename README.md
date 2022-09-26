@@ -15,8 +15,6 @@
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
 1. Clone this repo
    ```sh
    git clone https://github.com/Wendy-Russo/P12_Wendy_Russo_20072022
