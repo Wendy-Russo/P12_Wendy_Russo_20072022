@@ -15,7 +15,7 @@ export const getUserMainData = async (id) =>{
         const JSON = response.json()
         return JSON
     } catch (error) {
-    console.log("error " + error)
+        console.log("error " + error)
     }
 }
 

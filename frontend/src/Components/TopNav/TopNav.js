@@ -1,4 +1,4 @@
-import {React , useEffect }from 'react';
+import {React }from 'react';
 import { Link } from 'react-router-dom'
 import Logo from "../../Data/Group.png"
 import './TopNav.scss'
@@ -25,7 +25,7 @@ function TopNav(props) {
           <ul>
             <li>
               <Link to="/" className='li-logo'>
-                <img src={Logo} className="img-logo" />
+                <img src={Logo} alt="logo" className="img-logo" />
                 SportSee
               </Link>
             </li>
